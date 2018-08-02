@@ -1040,9 +1040,13 @@ cov(dosis,resp)
 <div class="slideContent" >
 <h3><strong>El coeficiente de correlación de Pearson r (coef. de covariación estandarizado)</strong></h3>
 
-<p>El problema de usar la covarianza como medida de relación entre variables estriba en que depende de la escala de las medidas usadas. Es decir, <strong>la covarianza no es una medida estandarizada</strong>. Por tanto la covarianza no puede ser usada para comparar las relaciones entre variables medidas en diferentes unidades.</p>
+<p>El problema de usar la covarianza como medida de relación entre variables estriba en que depende de la escala de las medidas usadas. Es decir, <strong>la covarianza no es una medida estandarizada</strong>. </p>
 
-<p>Para resolver el problema de dependencia de la escala o unidades de las mediciones (valores), necesitamos una unidad a la cual pueda convertirse cualquier medida. Esta <strong>unidad de medida libre de escala</strong> es la <strong>desviación estándar (<em>s</em> ó \( \sigma \)</strong>). Al igual que la varianza, mide la desviación promedio de los datos con respecto a la media aritmética por no ser otra cosa que la \( \sqrt{varianza} \) ó \( \sqrt{s^2} \). Al dividir cualquier distancia de la media por la desviación estándar, obtendremos una distancia en unidades de desviación estándar.</p>
+<p>Por tanto la covarianza no puede ser usada para comparar las relaciones entre variables medidas en diferentes unidades.</p>
+
+<p>Para resolver el problema de dependencia de la escala o unidades de las mediciones (valores), necesitamos una unidad a la cual pueda convertirse cualquier medida. Esta <strong>unidad de medida libre de escala</strong> es la <strong>desviación estándar (<em>s</em> ó \( \sigma \)</strong>). </p>
+
+<p>Al igual que la varianza, mide la desviación promedio de los datos con respecto a la media aritmética por no ser otra cosa que la \( \sqrt{varianza} \) ó \( \sqrt{s^2} \). Al dividir cualquier distancia de la media por la desviación estándar, obtendremos una distancia en unidades de desviación estándar.</p>
 
 <p>Por tanto, <strong>para normalizar la covarianza la tenemos que dividir por la desviación estándar</strong>. Como la covarianza se calcula para dos variables cov(x,y), tenemos que calcular la desviación estándar para cada variable, multiplicándolas entre ellas, es decir:</p>
 
@@ -1112,7 +1116,7 @@ round(cor(dosis,resp), 2)
 
 <h3><strong>El coeficiente de correlación no paramétrico de Kendall \( \tau \)</strong></h3>
 
-<p>El coeficiente de correlación \( \tau \) de Kendall es no paramétrico, es decir, se puede usar cuando se viola el supesto de distribución normal de las variables a comparar. </p>
+<p>El coeficiente de correlación \( \tau \) de Kendall es <strong>no paramétrico</strong>, es decir, se puede usar cuando se viola el supesto de distribución normal de las variables a comparar. </p>
 
 <p>La correlación \( \tau \) de Kendall es particularmente adecuada cuando tenemos un set de datos pequeño con muchos valores en el mismo rango o clase. Se puede usar por ejemplo con datos categóricos codificados binariamene (0,1). </p>
 
@@ -1209,7 +1213,7 @@ cat(&quot;error estándar de zr (SEzr):&quot;, SEzr)
 <li>Este valor generalmente va a ser 0, ya que queremos probar que \( H_1 \neq H_0 \), es decir, trataremos de rechazar la \( H_0: r = 0 \). </li>
 </ul>
 
-<p>Por tanto: \( \displaystyle z = \frac{z_r-0}{SE_{z_r}} = \frac{z_r}{SE_{z_r}} \)  </small></p>
+<p>Por tanto: \( \displaystyle z = \frac{z_r-0}{SE_{z_r}} = \frac{z_r}{SE_{z_r}} \)</p>
 
 <ul>
 <li><strong>Cálculo de la significancia de \( r \) usando \( z \)</strong> </li>
@@ -1236,13 +1240,24 @@ cat(&quot;valor p de dos colas: &quot;, pvalue2sided, &quot;## &lt;&lt;&lt; Gene
 <pre><code>valor p de dos colas:  0.05939484 ## &lt;&lt;&lt; Generalmente usamos este caso
 </code></pre>
 
+<p></small></p>
+
 </div>
 
 </section>
 <section data-transition="default" data-transition-speed="fast">
 <h3>Significancia del coeficiente de correlación -- cont.</h3>
 <div class="slideContent" >
-<p>Pueden usar la función \( convert.z.score() \) para convertir \( z-scores \) a \( p-values \), mostrada abajo.</p>
+<p>Pueden usar la función \( convert.z.score() \) para convertir \( z-scores \) a \( p-values \), mostrada abajo.
+<small></p>
+
+<pre><code class="r"># Vean cómo se importa código de en un archivo almacenado en el disco local
+source(&quot;./code/func_convert.z.score.R&quot;) 
+
+# con este comando podemos imprimir a STDOUT (consola) el contenido del archivo guardado  
+# en disco
+cat(readLines(&#39;./code/func_convert.z.score.R&#39;), sep = &#39;\n&#39;)
+</code></pre>
 
 <pre><code># función para convertir z-scores a p-values, tomada de https://www.biostars.org/p/17227/
 convert.z.score&lt;-function(z, one.sided=NULL) {
@@ -1258,8 +1273,19 @@ convert.z.score&lt;-function(z, one.sided=NULL) {
 }
 </code></pre>
 
+<pre><code class="r"># Con estas líneas llamamos a la función que hemos importado con source
+pval.2s &lt;- convert.z.score(z)
+pval.1s &lt;- convert.z.score(z, 1)
+
+# imprimimos el contenido de las variables que almacenan el resultado devuelto  
+# por la función
+cat(&quot;2-sided pval: &quot;, pval.2s, &quot;| 1-sided pval: &quot;, pval.1s)
+</code></pre>
+
 <pre><code>2-sided pval:  0.05939484 | 1-sided pval:  0.02969742
 </code></pre>
+
+<p></small></p>
 
 </div>
 
@@ -1267,9 +1293,9 @@ convert.z.score&lt;-function(z, one.sided=NULL) {
 <section data-transition="default" data-transition-speed="fast">
 <h3>Significancia del coeficiente de correlación -- cont.</h3>
 <div class="slideContent" >
-<h3><strong>Cálculo de la significancia de \( r \) mediante el estadístico-\( t \) y la funcion \( cor.test() \)</strong></h3>
+<h3><strong>Cálculo de la significancia de \( r \) mediante el estadístico-\( tr \) y la funcion \( cor.test() \)</strong></h3>
 
-<p>En R el test de significancia de \( r \) está implementado en la función \( cor.test() \), basado en el estadístico-\( t \). con \( N-2 \) grados de libertad, que pueden obtenerse directamente de \( r \):  </p>
+<p>En R el test de significancia de \( r \) está implementado en la función \( cor.test() \), basado en el estadístico-\( t \), con \( N-2 \) grados de libertad, que pueden obtenerse directamente de \( r \):  </p>
 
 <p>\[ \displaystyle t_r = \frac{r \sqrt{(N-2)}}{\sqrt{1-r^2}}\\ \]</p>
 
@@ -1277,20 +1303,20 @@ convert.z.score&lt;-function(z, one.sided=NULL) {
 # Cálculo de r
 r &lt;- cor(dosis,resp)
 
-# Cálculo del estadístico-t
+# Cálculo del estadístico-tr
 tr &lt;- r*(sqrt((5-2)))/sqrt((1-r**2))
-cat(&quot;valor del estadístico-t: &quot;, tr)
+cat(&quot;valor del estadístico-tr: &quot;, tr)
 </code></pre>
 
-<pre><code>valor del estadístico-t:  3.073181
+<pre><code>valor del estadístico-tr:  3.073181
 </code></pre>
 
 <pre><code class="r"># cálculo de la p del estadístico
 ptr &lt;- 2*pt(tr, 3, lower.tail = FALSE)
-cat(&quot;valor de la p para el estadístico-t: &quot;, ptr)
+cat(&quot;valor de la p para el estadístico-tr: &quot;, ptr)
 </code></pre>
 
-<pre><code>valor de la p para el estadístico-t:  0.05442624
+<pre><code>valor de la p para el estadístico-tr:  0.05442624
 </code></pre>
 
 </div>
@@ -1332,7 +1358,7 @@ sample estimates:
 
 <p>Las siguientes cuatro magnitudes están íntimamente relacionadas:<br/>
     <strong>tamaño muestral</strong> (número de observaciones; \( n \))<br/>
-    <strong>tamaño del efecto</strong> (medida de la fuerza de un fenómeno; la magnitud de estadístico, p. ej. \( r \)) 
+    <strong>tamaño del efecto</strong> (medida de la fuerza de un fenómeno; la magnitud del estadístico, p. ej. \( r \)) 
     <strong>nivel de significancia</strong> = P(error Tipo I) = probabilidad de observar un efecto inexistente<br/>
     <strong>potencia</strong> = 1 - P(error Tipo II) = probabilidad de observar un efecto real  </p>
 
@@ -1377,7 +1403,7 @@ sample estimates:
 <section data-transition="default" data-transition-speed="fast">
 <h3>Lecciones del cuarteto de Anscombe -- código</h3>
 <div class="slideContent" >
-<p><strong>Nota</strong>: El código que sigue puede ser un poco difícil de entender ya que contiene bucles for anidados y otros detalles sintácticos que no hemos visto en el curso. Muestro el código para los interesados en aprender nuevos aspectos clave del lenguaje. Pero lo importante no es el código, sino las gráficas y análisis estadísticos resultantes, que discutiremos al final de la sección.</p>
+<p><strong>Nota</strong>: El código que sigue puede ser un poco difícil de entender ya que contiene un bucle for y otros detalles sintácticos que no hemos visto en el curso. Muestro el código para los interesados en aprender nuevos aspectos clave del lenguaje. Pero lo importante no es el código, sino las gráficas y análisis estadísticos resultantes, que discutiremos al final de la sección.</p>
 
 <h3><strong>Los datos del cuarteto de Anscombe</strong></h3>
 
@@ -1452,7 +1478,7 @@ diag(cor(anscombe[,1:4], anscombe[,5:8]))
 # 1) mediante par(mfrow=c(2,2), mar=c(6,4,1,1)) controlamos que las  
 #    4 gráficas queden en un solo display como una matriz de 2x2
 
-# 2) Mediante un bucle for, obtenemos los índices para  1:4
+# 2) Mediante un bucle for, obtenemos los índices (1:4) para
 #    poder indexar el dataframe asncombe, atendiendo a los números  
 #    de las columnas de las variables x,y que nos interesan: 
 #            índices i para columnas x = (1,2,3,4); # for(i in 1:4)
@@ -1524,16 +1550,12 @@ par(oldpar)
 <section data-transition="default" data-transition-speed="fast">
 <h3>Las gráficas de Anscombe -- discusión</h3>
 <div class="column column1 slideContent" style="width: 28%;" >
-<p><small></p>
-
 <ol>
 <li><p>Muestra lo que parece una relación lineal simple, para dos variables correlacionadas que satisfacen el supuesto de normalidad. </p></li>
 <li><p>El coef. de correl. de Pearson no es relevante, ya que se viola claramente el supuesto de relación lineal.  </p></li>
 <li><p>La distribución es lineal, pero se sale un punto extremo que influye lo suficiente como para alterar la línea de regresión y disminuir el coeficiente de correlación de 1 a 0.82. </p></li>
 <li><p>Se muestra que un valor atípico es suficiente para producir un coeficiente de correlación alto incluso cuando la relación entre las dos variables no es lineal. </p></li>
 </ol>
-
-<p></small></p>
 
 
 </div>
@@ -1550,10 +1572,10 @@ par(oldpar)
 <h3>Resumen de conceptos clave</h3>
 <div class="slideContent" >
 <ul>
-<li>Al estandarizar la covarianza, \( r \) variará entre \( \pm1 \)</li>
+<li>Al estandarizar la covarianza, \( r \) variará entre \( \pm\ 1 \)</li>
 <li>La <strong>correlación es positiva</strong> si ambas variables covarían en el mismo sentido</li>
 <li>La <strong>correlación es negativa</strong> si ambas variables covarían en sentidos opuestos</li>
-<li>\( r = \pm1 \) implica una correlación perfecta (ajuste perfecto a modelo lineal) entre la variable de respuesta y la var. independiente</li>
+<li>\( r = (\pm)\ 1 \) implica una correlación perfecta (ajuste perfecto a modelo lineal) entre la variable de respuesta y la var. independiente</li>
 <li>\( r = 0 \) implica que no existe correlación alguna entre la variable de respuesta y la var. independiente</li>
 <li>Dado que \( r \) es una medida estandarizada, se usa frecuentemente para medir el <strong>tamaño de un efecto</strong>, que generalmente se interpretan así:
 
@@ -2106,7 +2128,7 @@ $pvalue
 <section data-transition="default" data-transition-speed="fast">
 <h3>Ejercicio 3: Tamaño de muestra y potencia -- cont.</h3>
 <div class="slideContent" >
-<p>Podemos usar el paquete \( pwr \) de R para determinar la potencia estadística de nuestros datos para una amplia gama de tests estadísticos. Ilustraremos el uso de \( pwr \) para determinar \( r \)</p>
+<p>Podemos usar el paquete \( pwr \) de \( R \) para determinar la potencia estadística de nuestros datos para una amplia gama de tests estadísticos. Ilustraremos el uso de \( pwr \) para determinar \( r \)</p>
 
 <p>\( pwr.r.test(n = , r = , sig.level = , power = ) \)</p>
 
@@ -2118,7 +2140,9 @@ $pvalue
 
 <p>Como vimos en 1.3.3, dados cualesquiera 3 de estos valores podremos calcular el cuarto.</p>
 
-<p>Usamos el coef. de correlación poblacional com la medida de tamaño de efecto. Cohen sugiere que valores de \( r \) de 0.1, 0.3, y 0.5 representan tamaños de efecto pequeño. medio y grande, respectivamente.  </p>
+<p>Usamos el coef. de correlación poblacional como la medida de tamaño de efecto. </p>
+
+<p>Cohen sugiere que valores de \( r \) de 0.1, 0.3, y 0.5 representan tamaños de efecto pequeño. medio y grande, respectivamente.  </p>
 
 </div>
 
