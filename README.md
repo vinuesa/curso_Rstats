@@ -38,10 +38,14 @@ de 9 a 17:30 hrs, seg&uacute;n el [programa de los TIB18](http://congresos.nnb.u
 ## Sesiones y material asociado
 
 ### Sesi&oacute;n 1: correlaci&oacute;n (2 Agosto, 2018)
+- [presentaci&oacute;n - pdf](https://github.com/vinuesa/curso_Rstats/blob/master/docs/Correlacion.pdf)
+- [presentaci&oacute;n - html](https://github.com/vinuesa/curso_Rstats/blob/master/docs//Correlacion.html)
+- [presentaci&oacute;n - Rpres_html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/Correlacion_Rpres.html)
 
-### Sesi&oacute;n 2: regresi&oacute;n (2 Agosto, 2018)
-
-### Sesi&oacute;n 3: an&aacute;lisis de la varianza (3 Agosto, 2018)
+### Sesi&oacute;n 2: an&aacute;lisis de la varianza (2 Agosto, 2018) 
 - [presentaci&oacute;n - pdf](https://github.com/vinuesa/curso_Rstats/blob/master/docs/ANOVA.pdf)
 - [presentaci&oacute;n - html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/ANOVA.html)
 - [presentaci&oacute;n - Rpres_html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/ANOVA_Rpres.html)
+
+### Sesi&oacute;n 3: regresi&oacute;n (3 Agosto, 2018)
+
