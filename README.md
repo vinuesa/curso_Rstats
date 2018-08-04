@@ -1,5 +1,11 @@
-# curso_Rstats
-La última versión del material de este curso incluye apuntes detallados sobre tres temas: correlaci&oacute;n, regresi&oacute;n y an&aacute;nlisis de la varianza, preparado para los [Talleres de Bioinform&aacute;tica - TIB18](http://congresos.nnb.unam.mx/TIB2018)
+# curso_Rstats V2 (2-3 Agosto, 2018)
+La última versión (V2) del material de este curso incluye apuntes detallados sobre tres temas: 
+
+1. correlaci&oacute;n, 
+2. regresi&oacute;n 
+3.  an&aacute;nlisis de la varianza
+
+Este material fue preparado para los [Talleres de Bioinform&aacute;tica - TIB18](http://congresos.nnb.unam.mx/TIB2018)
 
 ## [Taller 2 - TIB18](http://congresos.nnb.unam.mx/TIB2018/t2-analisis-exploratorio-y-estadistico-de-datos-biologicos-usando-r/)
 Específicamente, el material se presenta en el taller 2 de los [Talleres de Bioinform&aacute;tica - TIB18](http://congresos.nnb.unam.mx/TIB2018), que este a&ntilde;o se enfocan en R.
@@ -37,15 +43,24 @@ de 9 a 17:30 hrs, seg&uacute;n el [programa de los TIB18](http://congresos.nnb.u
 
 ## Sesiones y material asociado
 
+Si tienes instalado [git](https://git-scm.com/) en tu computadora, puedes clonar el repositorio con el comando:
+
+   <code>git clone https://github.com/vinuesa/curso_Rstats.git</code>
+
+En [ubuntu](https://www.ubuntu.com/) es muy f&aacute;cil instalar git: 
+
+  <code>sudo apt install git</code>
+
+
 ### Sesi&oacute;n 1: correlaci&oacute;n (2 Agosto, 2018)
 - [presentaci&oacute;n - pdf](https://github.com/vinuesa/curso_Rstats/blob/master/docs/Correlacion.pdf)
-- [presentaci&oacute;n - html](https://github.com/vinuesa/curso_Rstats/blob/master/docs//Correlacion.html)
 - [presentaci&oacute;n - Rpres_html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/correlacion_Rpres.html)
 
-### Sesi&oacute;n 2: an&aacute;lisis de la varianza (2 Agosto, 2018) 
+### Sesi&oacute;n 2 (y 4): an&aacute;lisis de la varianza (2 y 3 Agosto, 2018) 
 - [presentaci&oacute;n - pdf](https://github.com/vinuesa/curso_Rstats/blob/master/docs/ANOVA.pdf)
-- [presentaci&oacute;n - html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/ANOVA.html)
 - [presentaci&oacute;n - Rpres_html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/ANOVA_Rpres.html)
 
-### Sesi&oacute;n 3: regresi&oacute;n (3 Agosto, 2018)
+### Sesi&oacute;n 3: regresi&oacute;n (3 Agosto, 2018) 
+- [presentaci&oacute;n - pdf](https://github.com/vinuesa/curso_Rstats/blob/master/docs/regresion.pdf)
+- [presentaci&oacute;n - Rpres_html](https://github.com/vinuesa/curso_Rstats/blob/master/docs/regresion_Rpres.html)
 
