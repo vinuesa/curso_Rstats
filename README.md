@@ -29,13 +29,16 @@ la evoluci&oacute;n y emergencia de pat&oacute;genos oportunistas a partir de mi
 ### Sobre el material did&aacute;ctico
 A trav&eacute;s de estas p&aacute;ginas se distribuyen los apuntes, ejercicios y datos que se usar&aacute;n en el bloque del T2.
 
-Para tu convenienca, se distribuye en tres formatos: pdf, html y presentaci&oacute;n htmlizada (Rpres.html).
+Para tu convenienca, se distribuye en tres formatos: pdf y presentaci&oacute;n htmlizada (Rpres.html).
 
 Este material lo estoy desarrollando activamente para [cursos de posgrado]() y [talleres sobre R y estadística](http://congresos.nnb.unam.mx/TIB2018) impartidos en el [Centro de Ciencias Gen&oacute;micas](https://www.ccg.unam.mx/) de la [Universidad Nacional Aut&oacute;noma de M&eacute;xico - UNAM](https://www.unam.mx/). 
 
 Puedes ver en mi sitio Web el [listados de cursos](http://www.ccg.unam.mx/~vinuesa/cursos.html) y materiales asociados, que pongo libremente disponible para la comunidad.
   
-El matrial docente del [curso_Rstats](https://github.com/vinuesa/curso_Rstats) lo distribuyo p&uacute;blicamente a trav&eacute;s de este repositorio GitHub bajo la licencia GNU-GPL3. 
+El material docente del [curso_Rstats](https://github.com/vinuesa/curso_Rstats) lo distribuyo p&uacute;blicamente a trav&eacute;s de este repositorio GitHub bajo la [**Licencia No Comercial Creative Commons 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 
+
 
 ### ¿Horario y lugar de impartici&oacute;n de las sesiones?
 Las clases se imparten del 30 de Julio al 3 de Agosto en el aula 2 de la LCG-UNAM, Cuernavaca, Morelos
