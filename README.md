@@ -40,13 +40,7 @@ El material docente del [curso_Rstats](https://github.com/vinuesa/curso_Rstats) 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 
 
-
-### ¿Horario y lugar de impartici&oacute;n de las sesiones?
-Las clases se imparten del 30 de Julio al 3 de Agosto en el aula 2 de la LCG-UNAM, Cuernavaca, Morelos
-de 9 a 17:30 hrs, seg&uacute;n el [programa de los TIB18](http://congresos.nnb.unam.mx/TIB2018/programa/)
-
-## Sesiones y material asociado
-
+#### Clonaci&oacute;n del repositorio
 Si tienes instalado [git](https://git-scm.com/) en tu computadora, puedes clonar el repositorio con el comando:
 
    <code>git clone https://github.com/vinuesa/curso_Rstats.git</code>
@@ -55,6 +49,12 @@ En [ubuntu](https://www.ubuntu.com/) es muy f&aacute;cil instalar git:
 
   <code>sudo apt install git</code>
 
+
+### ¿Horario y lugar de impartici&oacute;n de las sesiones?
+Las clases se imparten del 30 de Julio al 3 de Agosto en el aula 2 de la LCG-UNAM, Cuernavaca, Morelos
+de 9 a 17:30 hrs, seg&uacute;n el [programa de los TIB18](http://congresos.nnb.unam.mx/TIB2018/programa/)
+
+## Sesiones y material asociado
 
 ### Sesi&oacute;n 1: correlaci&oacute;n (2 Agosto, 2018)
 - [presentaci&oacute;n - pdf](https://github.com/vinuesa/curso_Rstats/blob/master/docs/Correlacion.pdf)
